@@ -1,0 +1,54 @@
+<% content_for :class, "scaffold" %>
+
+<div class="page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h2>Listing bricks</h2>
+      </div>
+      <div class="col-xs-6">
+        <%= link_to new_brick_path, class: 'btn btn-primary btn-large pull-right' do %>
+        <%= fa_icon_tag "plus" %> Add Brick
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Set number</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th class="td-actions text-right">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bricks.each do |brick| %>
+        <tr>
+          <td><%= brick.set_number %></td>
+          <td><%= brick.name %></td>
+          <td><%= brick.description %></td>
+          <td><%= brick.price %></td>
+          <td class="actions text-right">
+            <%= link_to fa_icon_tag("eye"), brick, rel: 'tooltip', title: 'Show' %>
+            <%= link_to fa_icon_tag("pencil"), edit_brick_path(brick), rel: 'tooltip', title: 'Edit' %>
+            <%= link_to fa_icon_tag("trash-o"), brick, rel: 'tooltip', title: 'Delete',
+            data: { confirm: 'Are you sure?' }, method: :delete %>
+          </td>
+        </tr>
+        <% end %>
+        <% if @bricks.length == 0 %>
+        <tr><td colspan=42 class='text-center'>No bricks.</td></tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+    <%= will_paginate @bricks, class: "pagination pagination-no-border" if @bricks.respond_to?(:total_pages) %>
+  
+  </div>

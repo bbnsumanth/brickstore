@@ -1,0 +1,23 @@
+<div class="col-md-4">
+    <div class="card card-product card-plain">
+        <div class="image">
+            <a href="#">
+                <%= image_tag("#{brick.set_number}-1.jpg", alt: "...") %>
+            </a>
+        </div>
+        <div class="content">
+            <a href="#">
+                <h4 class="title"><%= brick.name %></h4>
+            </a>
+            <p class="description">
+               <%= brick.description %>
+            </p>
+            <div class="footer">
+                <span class="price price-new"><%= brick.price %></span>
+                <button class="btn btn-danger btn-simple pull-right" rel="tooltip" title="Remove from wishlist" data-placement="left">
+                    <i class="fa fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    </div> <!-- end card -->
+ </div>
