@@ -1,28 +1,9 @@
-== README
+# UiReady Tutorial Series: Build a store page with backend in 20 min!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the sample code repository for UiReady Tutorial Series "Build a store page with backend in 20 min!"
+You can following along with this screencast to build it from scratch. Or you can download this code repository for review.
 
-Things you may want to cover:
+You can purchase Get Shit Done Pro Rails Version in here:
+https://uiready.io/items/get-shit-done-pro-rails-version
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+P.S. this code require you to have Get Shit Done Pro installed on your machine.
